@@ -27,7 +27,7 @@ const Todos = () => {
                 <input type="checkbox" id={`todo-${todo.id}`} checked={todo.completed} onChange={() => toggleTodoAsCompleted(todo.id)} />
                 <label htmlFor={`todo-${todo.id}`}>{todo.task}</label>
                 {
-                  todo.completed && <button type="button" onClick={e => handleDeleteTodo(todo.id)} >Delete</button>
+                  todo.completed && <button type="button" onClick={() => handleDeleteTodo(todo.id)} >Delete</button>
                 }
               </li>
             )
